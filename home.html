@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cervejaria do Pericles Delivery</title>
+    <link rel="stylesheet" href="./assets/CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hubballi&family=Inter:wght@600&family=Montserrat:wght@400;500;600;700;900&family=Oswald&family=Poppins:wght@400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+<script>
+    function valida_entrada() {
+        const url = new URLSearchParams(window.location.search)
+        let acesso = url.get("acesso")
+    
+        if (acesso == 1) {
+            document.getElementById("textoEntrada").innerHTML = "Olá! Gostaria de te dar boas vindas a Cervejaria do Pericles. Aqui você encontrará as melhores bebidas do Brasil!"
+            //Mostrar mensagem de boas vindas => tema mais de 18 anos
+        } else {
+            document.getElementById("textoEntrada").innerHTML = "Sinto muito, mas este site só é permitido para maiores de 18 anos!"
+            //Mostrar mensagem de boas vindas => tema mais de 18 anos
+        }
+    }
+
+
+</script>
+
+
+</head>
+
+<body onload="valida_entrada()">
+    <h1 id="textoEntrada"></h1>
+</body>
+
+</html>
